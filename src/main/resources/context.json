@@ -1,0 +1,746 @@
+{
+  "elements": [
+    {
+      "id": "IOT",
+      "label": "IoT",
+      "description": "Internet of Things",
+      "propertiesSchema": {
+        "$schema": "http://api.contactlab.it/hub#",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "client": {
+            "$ref": "resource:/public/schema/event/context/properties/client.json"
+          },
+          "user": {
+            "$ref": "resource:/public/schema/event/context/properties/user.json"
+          }
+        }
+      }
+    },
+    {
+      "id": "WEB",
+      "label": "Web event",
+      "description": "Events made in web context",
+      "propertiesSchema": {
+        "$schema": "http://api.contactlab.it/hub#",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "client": {
+            "$ref": "resource:/public/schema/event/context/properties/client.json"
+          },
+          "user": {
+            "$ref": "resource:/public/schema/event/context/properties/user.json"
+          }
+        }
+      }
+    },
+    {
+      "id": "MOBILE",
+      "label": "Mobile event",
+      "description": "Events made in mobile context",
+      "propertiesSchema": {
+        "type": "object",
+        "$schema": "http://api.contactlab.it/hub#",
+        "additionalProperties": false,
+        "properties": {
+          "client": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "contactlabProperties": {
+              "label": "Client"
+            },
+            "properties": {
+              "userAgent": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "contactlabProperties": {
+                  "label": "User agent",
+                  "indexed": false
+                }
+              },
+              "ip": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "ipv4",
+                "contactlabProperties": {
+                  "label": "Ip",
+                  "indexed": false
+                }
+              },
+              "localization": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": false,
+                "contactlabProperties": {
+                  "label": "Localization"
+                },
+                "properties": {
+                  "city": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "City",
+                      "indexed": false
+                    }
+                  },
+                  "country": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "Country",
+                      "indexed": false
+                    }
+                  },
+                  "region": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "Region",
+                      "indexed": false
+                    }
+                  },
+                  "province": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "Province",
+                      "indexed": false
+                    }
+                  },
+                  "zip": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "ZIP",
+                      "indexed": false
+                    }
+                  },
+                  "geo": {
+                    "$ref": "resource:/public/schema/enums.json#/definitions/GeographicLocation"
+                  }
+                }
+              }
+            }
+          },
+          "device": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "contactlabProperties": {
+              "label": "Device"
+            },
+            "properties": {
+              "bundleIdentifier": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "contactlabProperties": {
+                  "label": "Bundle identifier",
+                  "indexed": false
+                }
+              },
+              "versionNumber": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "contactlabProperties": {
+                  "label": "Version number",
+                  "indexed": false
+                }
+              },
+              "buildNumber": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "contactlabProperties": {
+                  "label": "Build number",
+                  "indexed": false
+                }
+              },
+              "identifierForVendor": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "contactlabProperties": {
+                  "label": "Identifier for vendor",
+                  "indexed": false
+                }
+              },
+              "systemVersion": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "contactlabProperties": {
+                  "label": "System version",
+                  "indexed": false
+                }
+              },
+              "model": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "contactlabProperties": {
+                  "label": "Model",
+                  "indexed": false
+                }
+              },
+              "deviceVendor": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "contactlabProperties": {
+                  "label": "Device vendor",
+                  "indexed": false
+                }
+              },
+              "locale": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "contactlabProperties": {
+                  "label": "Locale",
+                  "indexed": false
+                }
+              },
+              "language": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "contactlabProperties": {
+                  "label": "Language",
+                  "indexed": false
+                }
+              }
+            }
+          },
+          "user": {
+            "$ref": "resource:/public/schema/event/context/properties/user.json"
+          }
+        }
+      }
+    },
+    {
+      "id": "ECOMMERCE",
+      "label": "E-commerce event",
+      "description": "Events made in e-commerce context",
+      "propertiesSchema": {
+        "$schema": "http://api.contactlab.it/hub#",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "client": {
+            "$ref": "resource:/public/schema/event/context/properties/client.json"
+          },
+          "store": {
+            "$ref": "resource:/public/schema/event/context/properties/store.json"
+          },
+          "user": {
+            "$ref": "resource:/public/schema/event/context/properties/user.json"
+          }
+        }
+      }
+    },
+    {
+      "id": "DIGITAL_CAMPAIGN",
+      "label": "Digital campaign event",
+      "description": "Events made in digital message context, like email marketing, sms, push, etc.",
+      "propertiesSchema": {
+        "$schema": "http://api.contactlab.it/hub#",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "client": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "contactlabProperties": {
+              "label": "Client"
+            },
+            "properties": {
+              "userAgent": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "contactlabProperties": {
+                  "label": "User agent",
+                  "indexed": false
+                }
+              },
+              "ip": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "ipv4",
+                "contactlabProperties": {
+                  "label": "Ip",
+                  "indexed": false
+                }
+              },
+              "localization": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": false,
+                "contactlabProperties": {
+                  "label": "Localization"
+                },
+                "properties": {
+                  "city": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "City",
+                      "indexed": false
+                    }
+                  },
+                  "country": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "Country",
+                      "indexed": false
+                    }
+                  },
+                  "region": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "Region",
+                      "indexed": false
+                    }
+                  },
+                  "province": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "Province",
+                      "indexed": false
+                    }
+                  },
+                  "zip": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "ZIP",
+                      "indexed": false
+                    }
+                  },
+                  "geo": {
+                    "$ref": "resource:/public/schema/enums.json#/definitions/GeographicLocation"
+                  }
+                }
+              }
+            }
+          },
+          "user": {
+            "$ref": "resource:/public/schema/event/context/properties/user.json"
+          }
+        }
+      }
+    },
+    {
+      "id": "OTHER",
+      "label": "Other event",
+      "description": "Events made in other context",
+      "propertiesSchema": {
+        "$schema": "http://api.contactlab.it/hub#",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "client": {
+            "$ref": "resource:/public/schema/event/context/properties/client.json"
+          },
+          "user": {
+            "$ref": "resource:/public/schema/event/context/properties/user.json"
+          }
+        }
+      }
+    },
+    {
+      "id": "SOCIAL",
+      "label": "Social event",
+      "description": "Events made in social network context",
+      "propertiesSchema": {
+        "$schema": "http://api.contactlab.it/hub#",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "client": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "contactlabProperties": {
+              "label": "Client"
+            },
+            "properties": {
+              "userAgent": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "contactlabProperties": {
+                  "label": "User agent",
+                  "indexed": false
+                }
+              },
+              "ip": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "ipv4",
+                "contactlabProperties": {
+                  "label": "Ip",
+                  "indexed": false
+                }
+              },
+              "localization": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": false,
+                "contactlabProperties": {
+                  "label": "Localization"
+                },
+                "properties": {
+                  "city": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "City",
+                      "indexed": false
+                    }
+                  },
+                  "country": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "Country",
+                      "indexed": false
+                    }
+                  },
+                  "region": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "Region",
+                      "indexed": false
+                    }
+                  },
+                  "province": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "Province",
+                      "indexed": false
+                    }
+                  },
+                  "zip": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "ZIP",
+                      "indexed": false
+                    }
+                  },
+                  "geo": {
+                    "$ref": "resource:/public/schema/enums.json#/definitions/GeographicLocation"
+                  }
+                }
+              }
+            }
+          },
+          "user": {
+            "$ref": "resource:/public/schema/event/context/properties/user.json"
+          }
+        }
+      }
+    },
+    {
+      "id": "RETAIL",
+      "label": "Retail event",
+      "description": "Events made in store context",
+      "propertiesSchema": {
+        "type": "object",
+        "$schema": "http://api.contactlab.it/hub#",
+        "additionalProperties": false,
+        "properties": {
+          "client": {
+            "$ref": "resource:/public/schema/event/context/properties/client.json"
+          },
+          "salesAssistant": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "contactlabProperties": {
+              "label": "Sales assistant"
+            },
+            "properties": {
+              "id": {
+                "description": "The identifier of the sales assistant",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "contactlabProperties": {
+                  "label": "Id",
+                  "indexed": true
+                }
+              },
+              "firstName": {
+                "description": "The first name of the sales assistant",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "contactlabProperties": {
+                  "label": "First name",
+                  "indexed": true
+                }
+              },
+              "lastName": {
+                "description": "The last name of the sales assistant",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "contactlabProperties": {
+                  "label": "Last name",
+                  "indexed": true
+                }
+              },
+              "contacts": {
+                "description": "The contact information for the sales assistant",
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": false,
+                "contactlabProperties": {
+                  "label": "Contacts"
+                },
+                "properties": {
+                  "email": {
+                    "description": "The email address of the sales assistant",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "format": "email",
+                    "contactlabProperties": {
+                      "label": "Email",
+                      "indexed": false
+                    }
+                  },
+                  "mobilePhone": {
+                    "description": "The mobile phone number of the sales assistant",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "Mobile phone",
+                      "indexed": false
+                    }
+                  },
+                  "phone": {
+                    "description": "The phone number of the sales assistant",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "Phone",
+                      "indexed": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "store": {
+            "$ref": "resource:/public/schema/event/context/properties/store.json"
+          },
+          "user": {
+            "$ref": "resource:/public/schema/event/context/properties/user.json"
+          }
+        }
+      }
+    },
+    {
+      "id": "CONTACT_CENTER",
+      "label": "Contact center event",
+      "description": "Events made in contact center context.",
+      "propertiesSchema": {
+        "$schema": "http://api.contactlab.it/hub#",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "client": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "contactlabProperties": {
+              "label": "Client"
+            },
+            "properties": {
+              "userAgent": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "contactlabProperties": {
+                  "label": "User agent",
+                  "indexed": false
+                }
+              },
+              "ip": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "ipv4",
+                "contactlabProperties": {
+                  "label": "Ip",
+                  "indexed": false
+                }
+              },
+              "localization": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": false,
+                "contactlabProperties": {
+                  "label": "Localization"
+                },
+                "properties": {
+                  "city": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "City",
+                      "indexed": false
+                    }
+                  },
+                  "country": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "Country",
+                      "indexed": false
+                    }
+                  },
+                  "region": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "Region",
+                      "indexed": false
+                    }
+                  },
+                  "province": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "Province",
+                      "indexed": false
+                    }
+                  },
+                  "zip": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "contactlabProperties": {
+                      "label": "ZIP",
+                      "indexed": false
+                    }
+                  },
+                  "geo": {
+                    "$ref": "resource:/public/schema/enums.json#/definitions/GeographicLocation"
+                  }
+                }
+              }
+            }
+          },
+          "user": {
+            "$ref": "resource:/public/schema/event/context/properties/user.json"
+          }
+        }
+      }
+    }
+  ]
+}

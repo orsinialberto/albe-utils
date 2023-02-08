@@ -1,0 +1,8 @@
+graylog locale
+
+Nota: dopo l'avvio dei container, creare l'input per connettere l'applicativo:
+
+    andare su http://localhost:8000/system/inputs
+    dal menù select input selezionare GELF TCP -> launch new input
+    inserire nome, scegliere l'unico nodo presente e lasciare le impostazioni di default e creare l'input
+    avviare l'applicativo (con parametro --logging.config={path}/logback-development.xml)
